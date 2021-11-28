@@ -1,5 +1,5 @@
 /**
- *Submitted for verification at Etherscan.io on 2021-11-20
+ *Submitted for verification at Etherscan.io on 2021-11-27
 */
 
 // SPDX-License-Identifier: Unlicensed
@@ -714,7 +714,7 @@ contract ToshinoriInu is Context, IERC20, Ownable {
     
     uint256 public _marketingFee = 6;
     uint256 private _previousMarketingFee = _marketingFee;
-    address payable public marketingWallet = payable(0x026229477933A6874866DAe0490CB0a4A4Db12e1);
+    address payable public marketingWallet = payable(0x9329a24a4072454082db669eC09e6108298aEa0F);
 
     IUniswapV2Router02 public  uniswapV2Router;
     address public  uniswapV2Pair;
@@ -723,10 +723,10 @@ contract ToshinoriInu is Context, IERC20, Ownable {
     bool public swapAndLiquifyEnabled = true;
 
     uint256 public swapTokensAtAmount = 20000000 * 10**9;
-    uint256 public _maxTxAmount = 7600000 * 10**9;
+    uint256 public _maxTxAmount = 50000000 * 10**9;
     uint256 public maxWalletToken = 50000000 * (10**9);
     
-    uint256 public buyBackDivisor = 100;
+    uint256 public buyBackDivisor = 20;
     
     uint256 private buyBackUpperLimit = 1 * 10**17; // equal to 0.1 Ether
     bool public buyBackEnabled = true;
@@ -1242,7 +1242,7 @@ contract ToshinoriInu is Context, IERC20, Ownable {
         _taxFee = 1;
         _buybackFee = 2;
         _marketingFee = 6;
-        _maxTxAmount = 7600000 * 10**9;
+        _maxTxAmount = 50000000 * 10**9;
         maxWalletToken = 50000000 * 10**9;
     }
     
